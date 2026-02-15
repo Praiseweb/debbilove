@@ -70,31 +70,31 @@ Praiz`;
             <audio ref={audioRef} src="/music/love_my_baby.mp3" loop />
 
             {/* Left Side: The Letter */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 md:p-16 flex flex-col justify-center overflow-y-auto">
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-16 flex flex-col justify-center overflow-y-auto relative z-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white p-8 md:p-12 shadow-xl rounded-sm border border-slate-200 relative rotate-1"
+                    className="bg-white p-6 md:p-12 shadow-xl rounded-sm border border-slate-200 relative rotate-1 mb-24 md:mb-0"
                 >
                     {/* Paper texture effect */}
-                    <div className="absolute inset-0 bg-[#fdfbf7] opacity-50 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-[#fdfbf7] opacity-60 pointer-events-none"></div>
 
-                    <div className="relative z-10 font-serif text-xl md:text-2xl leading-relaxed whitespace-pre-wrap text-slate-700">
+                    <div className="relative z-10 font-serif text-lg md:text-2xl leading-relaxed whitespace-pre-wrap text-slate-700">
                         {typedText}
                         <span className="animate-pulse">|</span>
                     </div>
 
-                    <div className="absolute top-4 right-4 opacity-20 rotate-12">
-                        <ThreeDEmoji name="heart" size={80} />
+                    <div className="absolute top-2 right-2 md:top-4 md:right-4 opacity-20 rotate-12">
+                        <ThreeDEmoji name="heart" size={60} />
                     </div>
                 </motion.div>
             </div>
 
             {/* Right Side: The Player */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-rose-100 flex flex-col items-center justify-center p-8 relative">
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -top-20 -right-20 opacity-30"><ThreeDEmoji name="sparkles" size={200} /></div>
-                    <div className="absolute bottom-10 left-10 opacity-30"><ThreeDEmoji name="fire" size={150} /></div>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-rose-100 flex flex-col items-center justify-center p-4 relative z-10">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute -top-10 -right-10 opacity-30"><ThreeDEmoji name="sparkles" size={120} /></div>
+                    <div className="absolute bottom-5 left-5 opacity-30"><ThreeDEmoji name="fire" size={100} /></div>
                 </div>
 
                 <motion.div
@@ -106,9 +106,9 @@ Praiz`;
                     {/* Album Art */}
                     <div className="relative aspect-square rounded-full overflow-hidden mb-8 shadow-lg bg-black p-1">
                         <div className="absolute inset-0 bg-black rounded-full"></div>
-                        <img 
-                            src="/images/image3.jpg" 
-                            alt="Wizkid Superstar" 
+                        <img
+                            src="/images/image3.jpg"
+                            alt="Wizkid Superstar"
                             className={`w-full h-full object-cover rounded-full transition-transform duration-[10s] ease-linear ${isPlaying ? 'animate-spin-slow' : ''}`}
                         />
                         {/* Vinyl Center Hole */}
