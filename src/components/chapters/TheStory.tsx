@@ -79,7 +79,7 @@ Praiz`;
                     {/* Paper texture effect */}
                     <div className="absolute inset-0 bg-[#fdfbf7] opacity-60 pointer-events-none"></div>
 
-                    <div className="relative z-10 font-serif text-lg md:text-2xl leading-relaxed whitespace-pre-wrap text-slate-700">
+                    <div className="relative z-10 font-serif text-2xl md:text-3xl font-bold leading-relaxed whitespace-pre-wrap text-slate-800 drop-shadow-sm">
                         {typedText}
                         <span className="animate-pulse">|</span>
                     </div>
