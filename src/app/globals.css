@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-romantic-red: #e63946;
+  --color-deep-pink: #ff4d6d;
+  --color-soft-pink: #fff0f3;
+  --color-love-cream: #fff9fa;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-love-cream text-slate-800 font-sans antialiased overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
